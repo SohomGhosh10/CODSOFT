@@ -21,8 +21,9 @@ void displayTasks(const vector<Task>& tasks) {
 }
 
 int main() {
-    vector<Task> tasks;
+    vector<Task> tasks; // creating vector for storing the tasks
 
+    // Enter the choices
     while (true) {
         cout << "To-Do List Manager" << endl;
         cout << "1. Add Task" << endl;
@@ -36,7 +37,7 @@ int main() {
         cin >> choice;
 
         switch (choice) {
-            case 1: // Add Task
+            case 1: // For adding Task
                 {
                     Task task;
                     cout << "Enter task description: ";
@@ -48,11 +49,11 @@ int main() {
                 }
                 break;
 
-            case 2: // View Tasks
+            case 2: // For viewing Tasks
                 displayTasks(tasks);
                 break;
 
-            case 3: // Mark Task as Completed
+            case 3: // For marking Task as Completed
                 displayTasks(tasks);
                 int taskIndex;
                 cout << "Enter the task number to mark as completed: ";
@@ -65,7 +66,7 @@ int main() {
                 }
                 break;
 
-            case 4: // Remove Task
+            case 4: // For removing Task
                 displayTasks(tasks);
                 int removeIndex;
                 cout << "Enter the task number to remove: ";
